@@ -1,18 +1,22 @@
-try:
-	if 2 == 3:
-    print(A)
-except IndentationError:
-	print("Terjadi TypeError, pastikan Anda menjumlahkan dua angka.")
+def HitungIP():
+    try:
+        total = 0
+        banyak_matkul = int(input("Masukkan jumlah matkul: "))
+        for i in range(banyak_matkul):
+            total += float(input(f"Masukkan nilai matkul ke-{i+1}: "))
 
-try:
-    print("Hello")
-except:
-    print("Something went wrong")
-else:
-    print("Nothing went wrong")
-finally:
-    print("The 'try except' is finished")
+        mean = total / banyak_matkul
 
-teks = input("masukkan teks: ")  # misalnya diisiin "Hello World"
-print(teks)        #Output: Hello World
-print(type(teks))  #Output: <class 'str'>
+        print(f"IP mahasiswa pada semester ini adalah {mean:.2f}")
+
+    except ZeroDivisionError:
+        print("Jumlah Mata Kuliah tidak boleh nol !")
+
+    except ValueError:
+        print("Input tidak valid!, pastikan hanya masukkan angka")
+
+    except Exception as e:
+        print(f"Terdeteksi error tak terduga: {e}")
+
+
+HitungIP()
