@@ -43,13 +43,13 @@ import numpy as np
 A = np.array(A)
 B = np.array(B)
 
-C_tambah = np.array(A) + np.array(B)
+C_tambah = A + B
 print(C_tambah)
 
-C_kurang = np.array(A) - np.array(B)
+C_kurang = A - B
 print(C_kurang)
 
-C_skalar = np.array(A) * 4
+C_skalar = A * 4
 print(C_skalar)
 
 C_dot = np.dot(A, B)
